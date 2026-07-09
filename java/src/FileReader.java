@@ -10,15 +10,16 @@ public class FileReader {
         Path filePath = Path.of("sample_data", "sd1.txt");
         try {
             String stringContent = Files.readString(filePath);
-            String messyContentWithOnlyWords = stringContent.replaceAll("[^a-zA-Z0-9]", " ");
-            // System.out.println(messyContentWithOnlyWords);
-            String[] words = messyContentWithOnlyWords.split(" ");
+            String messyContentWithOnlyWordsAndIrregularSpaces = stringContent.replaceAll("[^a-zA-Z0-9]", " ");
+            // System.out.println(messyContentWithOnlyWordsAndIrregularSpaces);
+            String[] words = messyContentWithOnlyWordsAndIrregularSpaces.split(" ");
             for (String word : words) {
+                // System.out.println("[" + word + "]");
                 if (word.equals("")) {
                     continue;
                 }
                 // System.out.println("[" + word + "]");
-                String standardizedWord = word.trim().toLowerCase();
+                String standardizedWord = word.toLowerCase();
                 wordsList.add(standardizedWord);
             }
 
