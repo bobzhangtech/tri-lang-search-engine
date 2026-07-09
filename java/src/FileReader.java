@@ -1,13 +1,11 @@
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.ArrayList;
 import java.util.List;
 
 public class FileReader {
-    public static void main(String[] args) {
-        List<String> wordsList = new ArrayList<>();
-        Path filePath = Path.of("sample_data", "sd1.txt");
+    public static void storeFile(String folderName, String fileName, List<String> wordsList) {
+        Path filePath = Path.of(folderName, fileName);
         try {
             String stringContent = Files.readString(filePath);
             String messyContentWithOnlyWordsAndIrregularSpaces = stringContent.replaceAll("[^a-zA-Z0-9]", " ");
@@ -22,10 +20,9 @@ public class FileReader {
                 String standardizedWord = word.toLowerCase();
                 wordsList.add(standardizedWord);
             }
-
-            for (String word : wordsList) {
-                System.out.println("[" + word + "]");
-            }
+            // for (String word : wordsList) {
+            // System.out.println("[" + word + "]");
+            // }
         } catch (IOException e) {
             e.printStackTrace();
         }
