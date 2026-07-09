@@ -15,9 +15,9 @@ This is the logic behind the code:
 Example:
 
 > Search: apple
-1. notes.txt — 14 matches
-2. article.txt — 7 matches
-3. journal.txt — 2 matches
+1. file_1.txt — 14 matches
+2. file_2.txt — 7 matches
+3. file_3.txt — 2 matches
 
 What specific skills for each language this project demonstrates:
 * Java: 
