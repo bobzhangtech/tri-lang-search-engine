@@ -4,7 +4,7 @@ import java.nio.file.Path;
 import java.util.List;
 
 public class FileReader {
-    public static void storeFile(String folderName, String fileName, List<String> wordsList) {
+    public static void extractWords(List<String> wordsList, String folderName, String fileName) {
         Path filePath = Path.of(folderName, fileName);
         try {
             String stringContent = Files.readString(filePath);

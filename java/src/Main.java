@@ -3,16 +3,18 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+        List<String> fileNamesList = new ArrayList<>();
         List<String> wordsList = new ArrayList<>();
         String folderName = "sample_data";
-        String fileName = "sd1.txt";
 
-        FileReader.storeFile(folderName, fileName, wordsList);
+        DirectoryScanner.getFileNames(fileNamesList, folderName);
 
-        for (String word : wordsList) {
-            System.out.println("[" + word + "]");
+        for (String fileName : fileNamesList) {
+            FileReader.extractWords(wordsList, folderName, fileName);
+
+            for (String word : wordsList) {
+                System.out.println("[" + word + "]");
+            }
         }
-
-        DirectoryScanner.scanDirectory("sample_data");
     }
 }
