@@ -12,5 +12,7 @@ public class Main {
         for (String word : wordsList) {
             System.out.println("[" + word + "]");
         }
+
+        DirectoryScanner.scanDirectory("sample_data");
     }
 }
