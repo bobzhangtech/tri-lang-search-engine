@@ -39,5 +39,7 @@ Search for a word: apple
 ```
 
 ### To-Do
-* Figure out how to route from the main CLI program to the individual code
-* 
+* Finish the core function in Java
+  * Have a TargetDirectoryScanner file scan the target folder and grab each folder's name and contents, which will then by sent over to the completed FileReader file for every .txt file's individual word storing
+  * Have a WordMatcher file go through every .txt file's stored words array to count every matching word
+* Figure out how to route from the main CLI program to the individual code, and back to the CLI after results are obtained
