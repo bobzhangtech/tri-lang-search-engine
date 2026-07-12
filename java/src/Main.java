@@ -7,14 +7,22 @@ public class Main {
         List<String> wordsList = new ArrayList<>();
         String folderName = "sample_data";
 
+        String userInput = "very";
+
         DirectoryScanner.getFileNames(fileNamesList, folderName);
 
         for (String fileName : fileNamesList) {
             FileReader.extractWords(wordsList, folderName, fileName);
 
+            int count = 0;
+
             for (String word : wordsList) {
-                System.out.println("[" + word + "]");
+                if (userInput.equals(word)) {
+                    count++;
+                }
             }
+
+            System.out.println(fileName + " - " + count);
         }
     }
 }
