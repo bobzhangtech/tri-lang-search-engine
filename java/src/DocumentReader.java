@@ -3,7 +3,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
 
-public class FileReader {
+public class DocumentReader {
     public static void extractWords(List<String> wordsList, String folderName, String fileName) {
         Path filePath = Path.of(folderName, fileName);
         try {

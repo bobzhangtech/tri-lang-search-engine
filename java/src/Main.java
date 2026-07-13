@@ -16,7 +16,7 @@ public class Main {
         for (String fileName : fileNamesList) {
             List<String> wordsList = new ArrayList<>();
 
-            FileReader.extractWords(wordsList, folderName, fileName);
+            DocumentReader.extractWords(wordsList, folderName, fileName);
 
             int count = 0;
 
